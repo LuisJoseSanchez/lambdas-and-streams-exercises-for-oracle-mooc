@@ -49,6 +49,7 @@ public class Lesson1 {
     List<String> list = Arrays.asList(
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot");
 
+    /* YOUR CODE HERE */
     StringBuilder firstLetters = new StringBuilder();
     
     list.forEach((String word) -> { firstLetters.append(word.substring(0, 1)); } );
@@ -65,6 +66,7 @@ public class Lesson1 {
     List<String> list = new ArrayList<>(Arrays.asList(
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
+    /* YOUR CODE HERE */
     List<String> auxList = new ArrayList<>(list);
     
     auxList.forEach(
@@ -87,6 +89,7 @@ public class Lesson1 {
     List<String> list = new ArrayList<>(Arrays.asList(
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
+    /* YOUR CODE HERE */
     List<String> auxList = new ArrayList<>(list);
     
     auxList.forEach(
