@@ -51,9 +51,7 @@ public class Lesson1 {
 
     /* YOUR CODE HERE */
     StringBuilder firstLetters = new StringBuilder();
-    
     list.forEach((String word) -> { firstLetters.append(word.substring(0, 1)); } );
-    
     System.out.println(firstLetters);
   }
 
@@ -67,8 +65,8 @@ public class Lesson1 {
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     /* YOUR CODE HERE */
+    /* First solution (it works)
     List<String> auxList = new ArrayList<>(list);
-    
     auxList.forEach(
       (String word) -> {
         if (word.length() % 2 != 0) {
@@ -76,7 +74,11 @@ public class Lesson1 {
         }
       }
     );
+    System.out.println(list);
+    */
     
+    // Second solution. Using removeIf.
+    list.removeIf(s -> s.length() % 2 != 0);
     System.out.println(list);
   }
 
