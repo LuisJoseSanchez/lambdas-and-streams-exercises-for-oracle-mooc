@@ -65,19 +65,6 @@ public class Lesson1 {
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     /* YOUR CODE HERE */
-    /* First solution (it works)
-    List<String> auxList = new ArrayList<>(list);
-    auxList.forEach(
-      (String word) -> {
-        if (word.length() % 2 != 0) {
-          list.remove(word);
-        }
-      }
-    );
-    System.out.println(list);
-    */
-    
-    // Second solution. Using removeIf.
     list.removeIf(s -> s.length() % 2 != 0);
     System.out.println(list);
   }
