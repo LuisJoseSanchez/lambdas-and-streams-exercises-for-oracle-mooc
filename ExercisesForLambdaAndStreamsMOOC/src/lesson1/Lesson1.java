@@ -51,7 +51,7 @@ public class Lesson1 {
 
     /* YOUR CODE HERE */
     StringBuilder firstLetters = new StringBuilder();
-    list.forEach((String word) -> { firstLetters.append(word.substring(0, 1)); } );
+    list.forEach(s -> firstLetters.append(s.substring(0, 1)) );
     System.out.println(firstLetters);
   }
 
@@ -92,16 +92,7 @@ public class Lesson1 {
         "alpha", "bravo", "charlie", "delta", "echo", "foxtrot"));
 
     /* YOUR CODE HERE */
-    List<String> auxList = new ArrayList<>(list);
-    
-    auxList.forEach(
-      (String word) -> {
-        if (word.length() % 2 != 0) {
-          list.remove(word);
-        }
-      }
-    );
-    
+    list.replaceAll(s -> s.toUpperCase());
     System.out.println(list);
   }
 
