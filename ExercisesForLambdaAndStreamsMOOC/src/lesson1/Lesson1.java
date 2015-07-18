@@ -109,6 +109,9 @@ public class Lesson1 {
     map.put("a", 1);
 
     /* YOUR CODE HERE */
+    StringBuilder stringResult = new StringBuilder();
+    map.forEach((k, v) -> stringResult.append(k).append(v));
+    System.out.println(stringResult);
   }
 
   /**
