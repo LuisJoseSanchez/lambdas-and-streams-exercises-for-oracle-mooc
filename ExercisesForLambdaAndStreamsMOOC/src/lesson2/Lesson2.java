@@ -74,6 +74,12 @@ public class Lesson2 {
         "The", "Quick", "BROWN", "Fox", "Jumped", "Over", "The", "LAZY", "DOG");
 
     /* YOUR CODE HERE */
+    List<String> lowerCaseList = list.stream()
+      .filter(s -> s.length() % 2 == 1)
+      .map(s -> s.toLowerCase())
+      .collect(Collectors.toList());
+    
+    System.out.println(lowerCaseList);
   }
 
   /**
