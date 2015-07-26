@@ -97,8 +97,8 @@ public class Lesson1 {
 
     /* YOUR CODE HERE */
     StringBuilder stringResult = new StringBuilder();
-    map.forEach((k, v) -> stringResult.append(k).append(v));
-    System.out.println(stringResult);
+    map.forEach((k, v) -> stringResult.append(k).append("=").append(v).append(", "));
+    System.out.println(stringResult.substring(0, stringResult.length() - 2));
   }
 
   /**
