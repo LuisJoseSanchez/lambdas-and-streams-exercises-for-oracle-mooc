@@ -108,6 +108,12 @@ public class Lesson2 {
     try (BufferedReader reader = Files.newBufferedReader(
         Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
+      int numberOfLines = reader
+        .lines()
+        .mapToInt(l -> 1)
+        .sum();
+      
+      System.out.println(numberOfLines);
     }
   }
   
