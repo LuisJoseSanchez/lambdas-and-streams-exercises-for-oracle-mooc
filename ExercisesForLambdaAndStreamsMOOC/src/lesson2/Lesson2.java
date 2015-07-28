@@ -93,6 +93,12 @@ public class Lesson2 {
         "The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "dog");
 
     /* YOUR CODE HERE */
+    String result = list.stream()
+      .skip(1)
+      .limit(3)
+      .collect(Collectors.joining("-"));
+    
+    System.out.println(result);
   }
 
   /**
