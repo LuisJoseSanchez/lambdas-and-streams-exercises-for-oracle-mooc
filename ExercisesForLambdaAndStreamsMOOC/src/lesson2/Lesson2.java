@@ -110,7 +110,7 @@ public class Lesson2 {
       /* YOUR CODE HERE */
       int numberOfLines = reader
         .lines()
-        .mapToInt(l -> 1)
+        .mapToInt(line -> 1)
         .sum();
       
       System.out.println(numberOfLines);
@@ -125,8 +125,15 @@ public class Lesson2 {
    */
   private void exercise5() throws IOException {
     try (BufferedReader reader = Files.newBufferedReader(
-        Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
+      Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
+      List<String> words = reader
+      .lines()
+      .flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+      .distinct()
+      .collect(Collectors.toList());
+      
+      System.out.println(words);
     }
   }
   
@@ -139,6 +146,7 @@ public class Lesson2 {
     try (BufferedReader reader = Files.newBufferedReader(
         Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
+
     }
   }
   
@@ -149,6 +157,7 @@ public class Lesson2 {
     try (BufferedReader reader = Files.newBufferedReader(
         Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
+      
     }
   }
 
