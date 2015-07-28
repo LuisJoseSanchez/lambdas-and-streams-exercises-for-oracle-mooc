@@ -146,7 +146,15 @@ public class Lesson2 {
     try (BufferedReader reader = Files.newBufferedReader(
         Paths.get("SonnetI.txt"), StandardCharsets.UTF_8)) {
       /* YOUR CODE HERE */
-
+      List<String> words = reader
+      .lines()
+      .flatMap(line -> Stream.of(line.split(WORD_REGEXP)))
+      .distinct()
+      .map(word -> word.toLowerCase())
+      .sorted()
+      .collect(Collectors.toList());
+      
+      System.out.println(words);
     }
   }
   
