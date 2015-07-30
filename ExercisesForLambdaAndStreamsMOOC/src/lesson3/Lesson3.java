@@ -98,9 +98,11 @@ public class Lesson3 {
     RandomWords fullWordList = new RandomWords();
     List<String> wordList = fullWordList.createList(1000);
 
+    System.out.println(wordList);
+    /*
     measure("Sequential", () -> computeLevenshtein(wordList, false));
     measure("Parallel", () -> computeLevenshtein(wordList, true));
-    
+    */
 //    measure("Sequential", () -> processWords(wordList, false));
 //    measure("Parallel", () -> processWords(wordList, true));
   }
