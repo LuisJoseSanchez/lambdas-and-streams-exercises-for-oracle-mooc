@@ -43,7 +43,12 @@ public class RandomWords {
    */
   public List<String> createList(int listSize) {
     Random rand = new Random();
-    List<String> wordList = null; // YOUR CODE HERE
+
+    List<String> wordList = rand // YOUR CODE HERE
+      .ints(listSize, 0, sourceWords.size())
+      .mapToObj(i -> sourceWords.get(i))
+      .collect(Collectors.toList());
+      
 
     return wordList;
   }
