@@ -29,7 +29,7 @@ public class RandomWords {
    */
   public RandomWords() throws IOException {   
     try (BufferedReader reader = Files.newBufferedReader(Paths.get("words"))) {
-      sourceWords = null;    // YOUR CODE HERE
+      sourceWords = reader.lines().collect(Collectors.toList());    // YOUR CODE HERE
       
       System.out.println("Loaded " + sourceWords.size() + " words");
     }
